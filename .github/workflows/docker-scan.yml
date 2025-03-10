@@ -22,7 +22,7 @@ jobs:
     - name: Run Docker Scout vulnerability scan
       uses: docker/scout-action@v1  
       with:
-       command: scan 
+       command: analyze 
        image: debian:bullseye
        summary: true
        format: json
