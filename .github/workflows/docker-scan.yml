@@ -22,9 +22,10 @@ jobs:
     - name: Run Docker Scout vulnerability scan
       uses: docker/scout-action@v1  
       with:
-       command: analyze 
-       image: debian:bullseye
-       summary: true
-       format: json
-       github-token: ${{ secrets.GITHUB_TOKEN }}
-       write-comment: true
+        command: cves  
+        image: debian:bullseye
+        summary: true
+        format: table  
+        github-token: ${{ secrets.GITHUB_TOKEN }}
+        write-comment: true
+
